@@ -1,4 +1,4 @@
-.navbar-default {
+.custom-nav {
   background:#fff;
   font-size: 25px;
   border: 0;
@@ -6,7 +6,7 @@
 }
 .navbar-brand {
   font-size: 30px;
-  color:#000 !important;
+  color:black !important;
   font-weight: bold;
 }
 
@@ -128,4 +128,98 @@ p {
  bottom: 20px;
  right: 20px;
  display:none;
+}
+#footer {
+  background: black;
+  color: white;
+  text-align: center;
+}
+.founders {
+margin-top: 100px;
+text-align: center;
+}
+.card-horizontal {
+display: flex;
+flex: 1 1 auto;
+}
+.fa {
+padding: 20px;
+font-size: 30px;
+width: 80px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+}
+
+.fa:hover {
+opacity: 0.7;
+}
+.card {
+border: none;
+border-radius: 20px;
+}
+.card-img-top {
+width: 52%;
+height: 15vw;
+object-fit: contain;
+}
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+
+.fa-instagram {
+background: #125688;
+color: white;
+}
+.bar {
+height: 5px;
+background-color:red;
+}
+.training {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.title {
+  font-family: sans-serif;
+}
+.customTraining {
+background-image: url("img/learning.jpg");
+background-size: cover;
+width: 100%;
+height: 300px;
+border: 3px solid red;
+padding: 10px;
+box-shadow: 5px 10px black;
+border-radius:12px;
+}
+.join {
+  text-align: center;
+  font-weight: bolder;
+}
+ul {
+  font-size: 20px;
+}
+@media screen and (max-width: 380px) {
+  .jumbotron{
+    background-image: none!important;
+    background-color: white;
+    margin-top: 34px;
+    display: contents;
+    }
 }

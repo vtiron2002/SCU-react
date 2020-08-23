@@ -1,13 +1,42 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Home from './pages/Home';
+import React, { Component} from 'react'
+import './App.css';
+import {
+    BrowserRouter,
+    Switch,
+    Route,
+    Link,
+    useParams,
+  } from "react-router-dom";
+  import { Navbar,Nav,NavDropdown,NavItem,NavLink,FormControl,Button } from 'react-bootstrap'
+import AppHeader from './components/AppHeader';
+  // import AboutUs from './AboutUs';
+  import Contact from './pages/Contact';
+  import Founders from './pages/Founders';
+  import Mission from './pages/Mission';
+  import Training from './pages/Training';
+  import News from './components/News';
 
 
 ReactDOM.render(
   <BrowserRouter>
-      <App />
+
+    <div>
+      <AppHeader />
+
+      <Route exact path="/" component={App}/>
+      <Route path="/founders" component={Founders}/>
+      <Route path="/contact" component={Contact}/>
+      <Route path="/mission" component={Mission}/>
+      <Route path="/training" component={Training}/>
+      <Route path="/news" component={News}/>
+
+    </div>
+
   </BrowserRouter>,
   document.getElementById('root'),
 );
