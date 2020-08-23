@@ -9,7 +9,7 @@ return (
   <Row>
     <Col>
     <div>
-  <div className="jumbotron jumbotron-fluid founders" style={{color: '#f8f9fa', fontWeight: 'bolder', background: 'black'}}>
+  <div className="jumbotron jumbotron-fluid" style={{color: '#f8f9fa', fontWeight: 'bolder', background: 'black'}}>
     <div className="container">
       <h1 className="display-4">SCU Staff</h1>
     </div>
@@ -19,9 +19,9 @@ return (
     <div className="row">
       <div className="col-md-7">
         <h3>Debbie D. Sears</h3>
-        <div className="card" style={{width: '18rem', height: '12rem'}}>
+        <div className="card">
           <div className="card-horizontal">
-            <img className="card-img-top" src={require("../img/deb.jpeg")} alt="Card image cap" />
+            <img className="card-img-top founders-img" src={require("../img/deb.jpeg")} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">Board Treasurer</h5>
               <p className="card-text" />
@@ -54,7 +54,7 @@ return (
         <h3>Brigitta Rainey</h3>
         <div className="card" style={{width: '18rem', height: '12rem'}}>
           <div className="card-horizontal">
-            <img className="card-img-top" src={require("../img/gitta.jpeg")} alt="Card image cap" />
+            <img className="card-img-top founders-img" src={require("../img/gitta.jpeg")} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">Board Secretary</h5>
               <p className="card-text" />
@@ -78,7 +78,7 @@ return (
         <h3>Ty Rainey</h3>
         <div className="card" style={{width: '18rem', height: '12rem'}}>
           <div className="card-horizontal">
-            <img className="card-img-top" src={require("../img/ty.jpeg")} alt="Card image cap" />
+            <img className="card-img-top founders-img" src={require("../img/ty.jpeg")} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">Vice Chairman</h5>
               <p className="card-text">Director of IT</p>

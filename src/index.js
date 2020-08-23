@@ -20,6 +20,10 @@ import AppHeader from './components/AppHeader';
   import Mission from './pages/Mission';
   import Training from './pages/Training';
   import News from './components/News';
+  import Volunteer from './pages/Volunteer';
+  import Grants from './pages/Grants';
+  import TaskForce from './pages/TaskForce';
+
 
 
 ReactDOM.render(
@@ -34,6 +38,9 @@ ReactDOM.render(
       <Route path="/mission" component={Mission}/>
       <Route path="/training" component={Training}/>
       <Route path="/news" component={News}/>
+      <Route path="/volunteer" component={Volunteer}/>
+      <Route path="/grants" component={Grants}/>
+      <Route path="/taskForce" component={TaskForce}/>
 
     </div>
 

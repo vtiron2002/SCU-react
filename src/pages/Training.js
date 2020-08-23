@@ -18,6 +18,7 @@ return (
                 <br /><br />
               </div>
             </div>
+            <br /><br />
             <ul>
               <li>Financial Literacy Training
                 <ul>
@@ -46,15 +47,34 @@ return (
                 </ul>
               </li>
             </ul>
+            <br />
             <p style={{textAlign: 'center'}}>
               All trainings will be conducted by certified educators selected by SCU and based on their
               availability.
             </p>
             <br /><br />
-            <div className="join">
-              <h2 className="title">Become A Member Today and Start Training!</h2><br />
-              <a className="btn btn-danger btn-lg" href="https://mailchi.mp/0d937b05404c/membership">Join Us</a>
+            <Row className="col-md text-center">
+            <Col md="4">
+            <div>
+              <img className="tech" src={require("../img/computer.svg")} />
             </div>
+            </Col>
+            <Col md="4">
+            <div className="">
+              <img className="tech" src={require("../img/payment.svg")} />
+            </div>
+            </Col>
+            <Col md="4">
+            <div className="">
+              <img className="tech" src={require("../img/shop.svg")} />
+            </div>
+            </Col>
+            </Row>
+
+              <h2 className="title join">Become A Member Today and Start Training!</h2><br />
+              <div className="col-md-12 text-center">
+              <a className="btn btn-danger btn-lg" href="https://mailchi.mp/0d937b05404c/membership">Join Us</a>
+              </div>
           </div>
         </div>
       </div>
@@ -63,6 +83,7 @@ return (
 </Container>
 );
 }
+
 
 
 export default Mission;
