@@ -9,10 +9,10 @@ return (
   <Row>
     <Col>
     <div>
-  <div className="container task">
+  <div className="container">
     <div className="row">
       <div className="col">
-        <div className="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid customTaskForce">
           <div className="container">
             <h1 className="display-4">VOLUNTEER TASK FORCE</h1>
             <br /><br />
@@ -80,8 +80,25 @@ return (
     </div>
   </div>
   <br /><br />
+  <Row className="col-md text-center">
+  <Col md="4">
+  <div>
+    <img className="tech" src={require("../img/help.svg")} />
+  </div>
+  </Col>
+  <Col md="4">
+  <div className="">
+    <img className="tech" src={require("../img/help2.svg")} />
+  </div>
+  </Col>
+  <Col md="4">
+  <div className="">
+    <img className="tech" src={require("../img/help3.svg")} />
+  </div>
+  </Col>
+  </Row>
   <div className="join">
-    <h2 className="title">Become A Member Today and Start Training!</h2><br />
+    <h2 className="title">Become A Member Today and Start Volunteering!</h2><br />
     <a className="btn btn-danger btn-lg" href="https://mailchi.mp/0d937b05404c/membership">Join Us</a>
   </div>
   <br /><br />

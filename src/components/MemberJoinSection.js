@@ -18,7 +18,9 @@ return (
             <div className="col">
               <p style={{fontSize: '27px'}}>You will become a part of the movement to see change in our community by using all our efforts and resources to rebuild,
                 uplift and educate our youths or adults who may need assistance.  Join now!</p>
-              <a className="btn btn-danger" href="https://mailchi.mp/0d937b05404c/membership">Join Us</a>
+              <div className="text-center">
+              <a className="btn btn-lg btn-danger" href="https://mailchi.mp/0d937b05404c/membership">Join Us</a>
+              </div>
             </div>
           </div>
         </div>

@@ -162,30 +162,6 @@ opacity: 0.7;
 border: none;
 border-radius: 20px;
 }
-.fa-facebook {
-background: #3B5998;
-color: white;
-}
-
-.fa-twitter {
-background: #55ACEE;
-color: white;
-}
-
-.fa-linkedin {
-background: #007bb5;
-color: white;
-}
-
-.fa-youtube {
-background: #bb0000;
-color: white;
-}
-
-.fa-instagram {
-background: #125688;
-color: white;
-}
 .bar {
 height: 5px;
 background-color:red;
@@ -207,6 +183,26 @@ padding: 10px;
 box-shadow: 5px 10px black;
 border-radius:12px;
 }
+.customGrants {
+background-image: url("img/money.jpg");
+background-size: cover;
+width: 100%;
+height: 300px;
+border: 3px solid red;
+padding: 10px;
+box-shadow: 5px 10px black;
+border-radius:12px;
+}
+.customTaskForce {
+background-image: url("img/volunteer.png");
+background-size: cover;
+width: 100%;
+height: 300px;
+border: 3px solid red;
+padding: 10px;
+box-shadow: 5px 10px black;
+border-radius:12px;
+}
 .join {
   text-align: center;
   font-weight: bolder;
@@ -214,13 +210,17 @@ border-radius:12px;
 ul {
   font-size: 20px;
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 426px) {
   .jumbotron{
     background-image: none!important;
     background-color: white;
     margin-top: 34px;
     display: contents;
+    opacity: 10%;
     }
+  h1 {
+    color: black;
+  }
 }
 .tech {
   height: 100px;

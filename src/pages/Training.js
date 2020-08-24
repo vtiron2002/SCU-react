@@ -9,7 +9,7 @@ return (
   <Row>
     <Col>
 
-      <div className="container training">
+      <div className="container">
         <div className="row">
           <div className="col">
             <div className="jumbotron jumbotron-fluid customjumbotron customTraining">
@@ -72,7 +72,7 @@ return (
             </Row>
 
               <h2 className="title join">Become A Member Today and Start Training!</h2><br />
-              <div className="col-md-12 text-center">
+              <div className="col-md-12 text-center mb-5">
               <a className="btn btn-danger btn-lg" href="https://mailchi.mp/0d937b05404c/membership">Join Us</a>
               </div>
           </div>
