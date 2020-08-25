@@ -1,11 +1,11 @@
 .custom-nav {
   background:#fff;
-  font-size: 25px;
+  font-size: 15px;
   border: 0;
   font-family: Poppins;
 }
 .navbar-brand {
-  font-size: 30px;
+  font-size: 20px;
   color:black !important;
   font-weight: bold;
 }
@@ -138,6 +138,7 @@ p {
   border-radius: 50%;
 }
 .card-img-top {
+margin: auto;
 width: 190px;
 height: 15vw;
 object-fit: fill;
@@ -216,10 +217,13 @@ ul {
     background-color: white;
     margin-top: 34px;
     display: contents;
-    opacity: 10%;
+
     }
   h1 {
     color: black;
+  }
+  .card-img-top {
+    height: 48vw;
   }
 }
 .tech {
@@ -227,5 +231,8 @@ ul {
   width: 100px;
   margin-top: 20px;
   margin-bottom: 50px;
-
+}
+btn.memberNav {
+  height: 50px;
+  color: black;
 }

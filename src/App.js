@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {
   CssBaseline,
   withStyles,
@@ -16,6 +16,7 @@ import Contact from './pages/Contact';
 import FollowUs from './components/FollowUs';
 import { NewsContextProvider } from "./NewsApi";
 import News from "./components/News";
+
 
 
 const styles = theme => ({
@@ -36,9 +37,7 @@ const App = () => (
       <InfoSection />
       <MemberJoinSection />
       <FollowUs />
-      <NewsContextProvider>
-    <News />
-  </NewsContextProvider>
+
      </Fragment>
 );
 
