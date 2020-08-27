@@ -7,10 +7,10 @@ import {
     Link,
     useParams,
   } from "react-router-dom";
-  import { Navbar,Nav,NavDropdown,NavItem,NavLink,FormControl,Button } from 'react-bootstrap'
-  // import Home from './Home';
+import { Navbar,Nav,NavDropdown,NavItem,NavLink,FormControl,Button } from 'react-bootstrap'
 import Founders from '../pages/Founders';
 import Contact from '../pages/Contact';
+
 
 
 
@@ -39,14 +39,17 @@ class BootstrapNavbar extends React.Component{
                                         <NavDropdown.Item href="/events">Public Events</NavDropdown.Item>
                                         <NavDropdown.Item href="/member">Become A Member</NavDropdown.Item>
                                         </NavDropdown>
-                                    <Nav.Link href="/news" to="/news">News </Nav.Link>
-                                    <Nav.Link href="/contact" to="/contact">Contact</Nav.Link>
+                                    <Nav.Link href="/news">News </Nav.Link>
+                                    <Nav.Link href="/contact">Contact</Nav.Link>
                                     <button onclick="window.open('https://www.paypal.com/biz/fund?id=F5L38BZW2V7DJ','_blank')" className="btn btn-success btn-lg">DONATE</button>
+                                  
+
                                     </Nav>
 
                                 </Navbar.Collapse>
                             </Navbar>
                             <br />
+
                         </Router>
 
                     </div>
