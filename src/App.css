@@ -1,12 +1,12 @@
-.navbar-default {
+.custom-nav {
   background:#fff;
-  font-size: 25px;
+  font-size: 15px;
   border: 0;
   font-family: Poppins;
 }
 .navbar-brand {
-  font-size: 30px;
-  color:#000 !important;
+  font-size: 20px;
+  color:black !important;
   font-weight: bold;
 }
 
@@ -128,4 +128,111 @@ p {
  bottom: 20px;
  right: 20px;
  display:none;
+}
+#footer {
+  background: black;
+  color: white;
+  text-align: center;
+}
+.founders-img {
+  border-radius: 50%;
+}
+.card-img-top {
+margin: auto;
+width: 190px;
+height: 15vw;
+object-fit: fill;
+}
+.card-horizontal {
+display: flex;
+flex: 1 1 auto;
+}
+.fa {
+padding: 20px;
+font-size: 30px;
+width: 80px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+}
+
+.fa:hover {
+opacity: 0.7;
+}
+.card {
+border: none;
+border-radius: 20px;
+}
+.bar {
+height: 5px;
+background-color:red;
+}
+.training {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.title {
+  font-family: sans-serif;
+}
+.customTraining {
+background-image: url("img/learning.jpg");
+background-size: cover;
+width: 100%;
+height: 300px;
+border: 3px solid red;
+padding: 10px;
+box-shadow: 5px 10px black;
+border-radius:12px;
+}
+.customGrants {
+background-image: url("img/money.jpg");
+background-size: cover;
+width: 100%;
+height: 300px;
+border: 3px solid red;
+padding: 10px;
+box-shadow: 5px 10px black;
+border-radius:12px;
+}
+.customTaskForce {
+background-image: url("img/volunteer.png");
+background-size: cover;
+width: 100%;
+height: 300px;
+border: 3px solid red;
+padding: 10px;
+box-shadow: 5px 10px black;
+border-radius:12px;
+}
+.join {
+  text-align: center;
+  font-weight: bolder;
+}
+ul {
+  font-size: 20px;
+}
+@media screen and (max-width: 426px) {
+  .jumbotron{
+    background-image: none!important;
+    background-color: white;
+    margin-top: 34px;
+    display: contents;
+
+    }
+  h1 {
+    color: black;
+  }
+  .card-img-top {
+    height: 48vw;
+  }
+}
+.tech {
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+btn.memberNav {
+  height: 50px;
+  color: black;
 }
