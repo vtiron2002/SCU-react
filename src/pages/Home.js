@@ -9,7 +9,6 @@ import { Typography } from '@material-ui/core';
 
 export default () => (
 	<div>
-		<AppHeader />
 		<Typography variant="h4" />
 		<LogoHeader />
 		<Quotes />
