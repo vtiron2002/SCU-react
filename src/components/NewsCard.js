@@ -12,8 +12,8 @@ const NewsCard = (props) => {
             <Card.Img variant="top" src={urlToImage} style={{ width: '100%', height: '200px' }} />
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Card.Text>
-                    {content ? (content.substring(0, 200) + "...") : content}
+                <Card.Text style={{ fontSize: '16px' }}>
+                    {content ? (content.substring(0, 100) + "...") : content}
                 </Card.Text>
             </Card.Body>
             <Card.Footer>
