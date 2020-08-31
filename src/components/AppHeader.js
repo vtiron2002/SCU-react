@@ -32,7 +32,6 @@ class BootstrapNavbar extends React.Component{
                                         <NavDropdown.Item href="/founders">Our Staff</NavDropdown.Item>
                                     </NavDropdown><NavDropdown title="Our Programs" id="basic-nav-dropdown">
                                         <NavDropdown.Item href="/training">Training</NavDropdown.Item>
-                                        <NavDropdown.Item href="/grants">Grants</NavDropdown.Item>
                                         <NavDropdown.Item href="/taskForce">Volunteer Task Force</NavDropdown.Item>
                                     </NavDropdown><NavDropdown title="Get Involved" id="basic-nav-dropdown">
                                         <NavDropdown.Item href="/volunteer">Volunteer Opportunities</NavDropdown.Item>
@@ -41,7 +40,6 @@ class BootstrapNavbar extends React.Component{
                                         </NavDropdown>
                                     <Nav.Link href="/news">News </Nav.Link>
                                     <Nav.Link href="/contact">Contact</Nav.Link>
-                                    <button onclick="window.open('https://www.paypal.com/biz/fund?id=F5L38BZW2V7DJ','_blank')" className="btn btn-success btn-lg">DONATE</button>
                                   
 
                                     </Nav>
