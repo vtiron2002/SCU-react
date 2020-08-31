@@ -19,7 +19,7 @@ import Contact from './pages/Contact';
 import Founders from './pages/Founders';
 import Mission from './pages/Mission';
 import Training from './pages/Training';
-import News from './pages/News';
+import News from './pages/NewsPage/News';
 import Volunteer from './pages/Volunteer';
 import Grants from './pages/Grants';
 import TaskForce from './pages/TaskForce';

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import NewsCard from '../components/NewsCard'
+import NewsCard from '../../components/NewsCard'
+import './news-style.css'
 
 const API_KEY = "722c05c77ee94c99bb4d8d5e18dedddc";
 const News = () => {
@@ -30,11 +31,17 @@ const News = () => {
 
         return () => { abortController.abort() }
     }, [])
+    const cards = state ? state.map((article, index) => <NewsCard key={index} title={article.title} urlToImage={article.urlToImage} content={article.content} url={article.url} />) : 'no data yet'
 
     return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-            {state ? state.map((article, index) => <NewsCard key={index} title={article.title} urlToImage={article.urlToImage} content={article.content} url={article.url} />) : 'no data yet'}
-        </div>
+        <>
+            <div className="header">
+                <h1 className="heading">Lates News Update on #BLACKLIVESMATTER</h1>
+            </div>
+            <div className="cards-div">
+                {cards}
+            </div>
+        </>
     )
 }
 
