@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 const NewsCard = (props) => {
     const { urlToImage, title, content, url } = props;
-    const [state, setState] = useState(false);
 
     return (
 
@@ -18,7 +17,7 @@ const NewsCard = (props) => {
                 </Card.Text>
             </Card.Body>
             <Card.Footer>
-                <a href={url} target="_blank"><Button variant="primary">Read More</Button></a>
+                <a href={url} target="_blank" rel="noopener noreferrer"><Button variant="primary">Read More</Button></a>
             </Card.Footer>
         </Card>
     )
