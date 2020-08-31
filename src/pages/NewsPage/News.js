@@ -22,7 +22,6 @@ const News = () => {
         console.log(today)
         const url = `https://newsapi.org/v2/everything?q=blm&from=${today}&to=${today}&apiKey=${API_KEY}`;
 
-        let result = null;
         axios.get(url, { signal: signal })
             .then(res => {
                 setState(res.data.articles)
