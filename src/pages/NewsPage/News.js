@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import NewsCard from '../../components/NewsCard'
+import Spinner from 'react-bootstrap/Spinner'
 import './news-style.css'
 
 const API_KEY = "722c05c77ee94c99bb4d8d5e18dedddc";
@@ -31,7 +32,8 @@ const News = () => {
 
         return () => { abortController.abort() }
     }, [])
-    const cards = state ? state.map((article, index) => <NewsCard key={index} title={article.title} urlToImage={article.urlToImage} content={article.content} url={article.url} />) : 'no data yet'
+    const cards = state ? state.map((article, index) => <NewsCard key={index} title={article.title} urlToImage={article.urlToImage} content={article.content} url={article.url} />) : <Spinner animation="border" variant="primary" size="sm" >  <span className="sr-only">Loading...</span>
+    </Spinner>
 
     return (
         <>
