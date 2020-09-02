@@ -9,7 +9,7 @@ return (
   <Row>
     <Col md="6">
     <div>
-       <div className="showcase-left">
+       <div className="showcase-left ml-5">
          <h1>SILVER</h1>
          <h1>CITY</h1>
          <h1>UPRISING</h1>
