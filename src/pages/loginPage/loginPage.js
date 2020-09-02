@@ -20,9 +20,14 @@ class login extends React.Component {
 				password: password.value
 			})
 			.then((res) => {
+				
 				authServices.saveAuthToken(res.data.authToken);
 				authServices.saveUserInfo(res.data.userInfo);
-				console.log(authServices.getUser())
+				if (res.status === 201) {
+					
+					this.props.history.push('/members');
+				}
+				
 			})
 			.catch((err) => console.log(err.response));
 	};
