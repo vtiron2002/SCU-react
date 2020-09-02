@@ -17,31 +17,14 @@ return (
       <div className="container">
         <div className="row">
           <div className="col-md-7">
-            <FounderCard 
-              name="Debbie D. Sears" 
+            <FounderCard
+              name="Debbie D. Sears"
               imgSrc="/images/deb.jpeg"
               title="Board Treasurer"
-              description={`Debbie has over 20 years of healthcare experience as she started her career at Aetna as a work study
-              student from Maloney High School. She held numerous positions throughout her tenure with Aetna of
-              25 years. Her first assignment was an office assistant for the fraud department, Cash Application
-              Specialist, Escheat Analyst, Disability Team Leader and Senior Claims Reporting Analyst. She currently
-              holds the position of a Pharmacy Benefit Representative for Connecticare Inc. and has been employed
-              with the insurance company for 6 years. After she decided to take an early retirement from Aetna, she
-              embarked on a new career. She studied Pharmacy Technology at Middlesex Community College in
-              Middletown, CT. She is a licensed Pharmacy Technician. At an early age caring for her grandmother she
-              saw the need to educate the elderly and community on prescribed prescription drugs. She is very
-              successful in her current role. In her personal life she adores her son Damian who will be a senior this
-              year in college. She is very active in her church, Mount Hebron Baptist Church in Meriden, CT. The Lord
-              is first in her life. She is on auxiliaries such as the Deaconess ministry, Trustee ministry and served as
-              the financial secretary/treasurer for 10 years. She is on the Scholarship Committee for the past 8 years.
-              Debbie also served as the property manager for their rental properties. Most recently in the passing of
-              her mother, she took over the Angel Tree ministry as the Chairperson. She is now in her third successful
-              year. Fun fact about Debbie is she loves music and shoes. She wrote three songs and paid for them
-              with her allowance at the age of 14, she saw an ad in the Word up magazine. She officially owns the
-              rights to three songs. Her current goal is to own her own business.`}
+              description={`Debbie has over 20 years of healthcare experience as she started her career at Aetna as a work study student from Maloney High School.  She held numerous positions throughout her tenure with Aetna of 25 years. Her first assignment was an office assistant for the fraud department, Cash Application Specialist, Escheat Analyst, Disability Team Leader and Senior Claims Reporting Analyst.  She currently holds the position of a Pharmacy Benefit Representative for Connecticare Inc. and has been employed with the insurance company for 6 years.   After she decided to take an early retirement from Aetna, she embarked on a new career.  She studied Pharmacy Technology at Middlesex Community College in Middletown, CT.  She is a licensed Pharmacy Technician.  At an early age caring for her grandmother she saw the need to educate the elderly and community on prescribed medications.   She is very successful in her current role.    She is an active member of Mount Hebron Baptist Church in Meriden, CT.  The Lord is first in her life.  She is on auxiliaries such as the Deaconess ministry,   Trustee ministry and served as the financial secretary/treasurer for 10 years.  She is on the Scholarship Committee for the past 8 years. Debbie also served as the property manager for their rental properties.   Most recently in the passing of her mother, she took over the Angel Tree ministry as the Chairperson.  She is now in her third successful year.    Fun fact about Debbie is she loves music and shoes.  She wrote three songs and paid for them with her allowance at the age of 14, she saw an ad in the Word up magazine.  She officially owns the rights to three songs. Her current goal is to own her own business.`}
             />
-            <FounderCard 
-              name="Brigitta Rainey" 
+            <FounderCard
+              name="Brigitta Rainey"
               imgSrc="/images/gitta.jpeg"
               title="Board Secretary"
               description={`Graduated Magnum Cum Laude, Springfield College 2017
@@ -55,12 +38,12 @@ return (
               link="https://meritpages.com/brigittalove"
               linkDesc="Brigitta's Meritpage"
             />
-            <FounderCard 
-              name="Ty Rainey" 
+            <FounderCard
+              name="Ty Rainey"
               imgSrc="/images/ty.jpeg"
               title="Vice Chairman"
               subtitle="Director of IT"
-              description={`Ty Rainey is a Meriden based Tech guru, web developer, father and community organizer.
+              description={`Ty Rainey is a Meriden based Tech guru, web developer,and community organizer.
               He is one of the Co-founders of Silver City Uprising and supporter of the black lives matter movement.
               This journey means so much to him and his fellow Co-founders.
               Before starting Silver City Uprising, Ty worked in IT for 8 years as a Desktop Support Technician
