@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CssBaseline, withStyles } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import InfoSection from './components/Info';
@@ -18,15 +19,20 @@ const styles = theme => ({
 	},
 });
 
-const App = () => (
-	<Fragment>
+const BaseApp = ({ className }) => (
+	<main className={className}>
 		<CssBaseline />
 		<LogoHeader />
 		<Quotes />
 		<InfoSection />
 		<MemberJoinSection />
 		<FollowUs />
-	</Fragment>
+	</main>
 );
 
-export default withStyles(styles)(App);
+const App = styled(BaseApp)({
+  backgroundImage: 'linear-gradient(0deg, #c7ddea 0%, white 40%, white 100%)',
+  backgroundAttachment: 'fixed'
+})
+
+export default App;
