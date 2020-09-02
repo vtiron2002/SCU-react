@@ -9,8 +9,6 @@ import FollowUs from './components/FollowUs';
 import LogoHeader from './components/LogoHeader'
 import Quotes from './components/Quotes'
 
-
-
 const styles = theme => ({
 	main: {
 		padding: theme.spacing(3),
