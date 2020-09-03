@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { CssBaseline, withStyles } from '@material-ui/core';
+import { CssBaseline} from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,14 +10,6 @@ import FollowUs from './components/FollowUs';
 import LogoHeader from './components/LogoHeader'
 import Quotes from './components/Quotes'
 
-const styles = theme => ({
-	main: {
-		padding: theme.spacing(3),
-		[theme.breakpoints.down('xs')]: {
-			padding: theme.spacing(2),
-		},
-	},
-});
 
 const BaseApp = ({ className }) => (
 	<main className={className}>

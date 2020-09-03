@@ -13,12 +13,18 @@ class Contact extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    axios({
-      method: "POST",
-      url: "/api/contact",
-      baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
-      data:  this.state
-    }).then((response) => {
+    axios
+      .post('http://backend.silvercityuprising.com/api/contact', this.state)
+      // .then(() => console.log('success'))
+      // .catch(err => {
+      //   console.error(err);
+      // });
+    // axios({
+    //   method: "POST",
+    //   url: "/api/contact",
+    //   baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
+    //   data:  this.state
+    .then((response) => {
       if (response.data.status === 'success') {
         alert("Message Sent.");
         this.resetForm()

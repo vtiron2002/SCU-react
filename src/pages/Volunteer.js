@@ -50,7 +50,7 @@ return (
     </div>
     </Col>
     <Col>
-    <img className="showcase-img mt-5" src={require("../img/learning1.jpg")} />
+    <img className="showcase-img mt-5" alt="learning" src={require("../img/learning1.jpg")} />
 
     </Col>
   </Row>
