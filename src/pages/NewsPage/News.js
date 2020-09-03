@@ -4,40 +4,45 @@ import NewsCard from '../../components/NewsCard'
 import Spinner from 'react-bootstrap/Spinner'
 import './news-style.css'
 
-const API_KEY = "722c05c77ee94c99bb4d8d5e18dedddc";
 const News = () => {
     const [state, setState] = useState(null)
 
     useEffect(() => {
         const abortController = new AbortController()
-        const signal = abortController.signal;
 
-        let date = new Date();
-        if (date.getDate() === 1) {
-            console.log(true)
-            date = new Date(date.getTime() - 86400000)
-        }
-        const today = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + (date.getDate() - 1)).slice(-2)
-
-        console.log(today)
-        const url = `https://newsapi.org/v2/everything?q=blm&from=${today}&to=${today}&apiKey=${API_KEY}`;
-
-        axios.get(url, { signal: signal })
-            .then(res => {
-                setState(res.data.articles)
-            }).catch(err => {
-                console.log(err)
+        axios({
+            "method":"GET",
+            "url":"https://bing-news-search1.p.rapidapi.com/news/search",
+            "headers":{
+            "content-type":"application/octet-stream",
+            "x-rapidapi-host":"bing-news-search1.p.rapidapi.com",
+            "x-rapidapi-key":"bff6c04355msh46e32c3afb8d323p1eaeedjsnbf048a37783e",
+            "x-bingapis-sdk":"true",
+            "useQueryString":true
+            },"params":{
+            "freshness":"Day",
+            "textFormat":"Raw",
+            "safeSearch":"Off",
+            "q":"blacklivesmatter"
+            }
+            })
+            .then((response)=>{
+              // console.log(response.data.value)
+              setState(response.data.value)
+            })
+            .catch((error)=>{
+              console.log(error)
             })
 
         return () => { abortController.abort() }
     }, [])
-    const cards = state ? state.map((article, index) => <NewsCard key={index} title={article.title} urlToImage={article.urlToImage} content={article.content} url={article.url} />) : <Spinner animation="border" variant="primary" size="sm" >  <span className="sr-only">Loading...</span>
+    const cards = state ? state.map((value, index) => <NewsCard key={index} title={value.name} urlToImage={value.image.thumbnail.contentUrl} content={value.description} url={value.url} />) : <Spinner animation="border" variant="primary" size="sm" >  <span className="sr-only">Loading...</span>
     </Spinner>
 
     return (
         <>
             <div className="header">
-                <h1 className="heading">Lates News Update on #BLACKLIVESMATTER</h1>
+                <h1 className="heading">Latest News</h1>
             </div>
             <div className="cards-div">
                 {cards}
