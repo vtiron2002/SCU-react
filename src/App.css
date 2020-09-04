@@ -130,6 +130,7 @@ p {
  display:none;
 }
 #footer {
+
   background: black;
   color: white;
   text-align: center;
@@ -232,7 +233,7 @@ ul {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-btn.memberNav {
+.btn.memberNav {
   height: 50px;
   color: black;
 }

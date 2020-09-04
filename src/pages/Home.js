@@ -8,8 +8,7 @@ import MemberJoinSection from '../components/MemberJoinSection';
 import { Typography } from '@material-ui/core';
 
 export default () => (
-	<div>
-		<AppHeader />
+	<div>		
 		<Typography variant="h4" />
 		<LogoHeader />
 		<Quotes />
