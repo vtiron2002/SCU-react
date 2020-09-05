@@ -42,12 +42,16 @@ class login extends React.Component {
 	const userNameStatus = validator.userNameValidator(user_name);
 	const passWordStatus = validator.userNameValidator(password);
 
-	if(!userNameStatus.status && !passWordStatus.status){	
+	if(!userNameStatus.status || !passWordStatus.status){	
+		console.log("flase");
+
 	return	this.setState({btnDisable:false})
 	}	
-
+	else{
+		
 		this.setState({btnDisable:true})		 
 		this.setState({errorMessage:userNameStatus.errorMessage})
+	}
 	
 
 	};	
@@ -71,7 +75,7 @@ class login extends React.Component {
 									<Form.Label>{this.state.errorMessage}</Form.Label>
 									<Form.Control type="password" placeholder="Password" name="password" className="password"/>
 								</Form.Group>
-								{console.log(this.state.btnDisable) }
+								{console.log(this.state.errorMessage) }
 
 								<Button
 									variant="primary"
