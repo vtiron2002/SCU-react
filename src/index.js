@@ -24,6 +24,7 @@ import Volunteer from './pages/Volunteer';
 import Grants from './pages/Grants';
 import TaskForce from './pages/TaskForce';
 import Events from './pages/Events';
+import Landing from './pages/Landing'
 
 
 
@@ -35,7 +36,7 @@ ReactDOM.render(
     <div>
       <AppHeader />
 
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Landing} />
       <Route path="/founders" component={Founders} />
       <Route path="/contact" component={Contact} />
       <Route path="/mission" component={Mission} />
