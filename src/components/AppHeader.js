@@ -36,7 +36,7 @@ function BootstrapNavbar() {
           <Router>
             <Navbar className="custom-nav justify-content-between" expand="lg" sticky="top">
               <Navbar.Brand id="navbar-brand" href="/">
-                <img style={{ width: '120px' }} src={logo} />
+                <img style={{ width: '120px' }} src={logo} alt="logo" />
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -56,9 +56,9 @@ function BootstrapNavbar() {
                     </NavDropdown>
                   <Nav.Link href="/news">News</Nav.Link>
                   <Nav.Link href="/contact">Contact</Nav.Link>
-                  <DonateLink href="/donate">Donate</DonateLink>
+                  <DonateLink href="https://www.flipcause.com/widget/OTIyNjU=">Donate</DonateLink>
                   <Nav.Link href="/login">
-                    <img style={{ width: '32px' }} src={loginPic} />
+                    <img style={{ width: '32px' }} src={loginPic} alt="loginpic" />
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>

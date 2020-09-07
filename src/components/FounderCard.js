@@ -19,7 +19,7 @@ const FounderCard = ({ name, imgSrc, title, subtitle, description, link, linkDes
       <h3>{name}</h3>
       <div className="card bg-transparent">
         <div className={classes.cardHorizontal}>
-          <img className="card-img-top founders-img" src={imgSrc} alt="Card image cap" />
+          <img className="card-img-top founders-img" alt="founders" src={imgSrc} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             {subtitle ? <p className="card-text">Director of IT</p> : (null)}

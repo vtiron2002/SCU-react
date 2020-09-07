@@ -59,17 +59,17 @@ return (
   <Row className="col-md text-center">
   <Col md="4">
   <div>
-    <img className="tech" src={require("../img/help.svg")} />
+    <img className="tech" alt="help" src={require("../img/help.svg")} />
   </div>
   </Col>
   <Col md="4">
   <div className="">
-    <img className="tech" src={require("../img/help2.svg")} />
+    <img className="tech" alt="help2" src={require("../img/help2.svg")} />
   </div>
   </Col>
   <Col md="4">
   <div className="">
-    <img className="tech" src={require("../img/help3.svg")} />
+    <img className="tech" alt="help3" src={require("../img/help3.svg")} />
   </div>
   </Col>
   </Row>

@@ -21,7 +21,7 @@ return (
     </Col>
     <Col md="6">
     <div className="showcase-right">
-      <img className="showcase-img" src={require("../img/SCU.png")} />
+      <img className="showcase-img" alt="logo" src={require("../img/SCU.png")} />
     </div>
     </Col>
   </Row>
