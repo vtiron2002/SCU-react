@@ -18,7 +18,7 @@ import News from './pages/NewsPage/News';
 import Volunteer from './pages/Volunteer';
 import TaskForce from './pages/TaskForce';
 import Events from './pages/Events';
-import Landing from './pages/Landing'
+import Landing from './pages/LandingPage/Landing'
 
 
 
