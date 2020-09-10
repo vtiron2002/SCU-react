@@ -20,7 +20,10 @@ export default {
 	},
 	passwordValidator: (passWord) => {
 		if (!passWord) {
-			return true;
+			return {
+				errorMessage: 'Please Insert password',
+				status: true
+			};
 		}
 
 		return {

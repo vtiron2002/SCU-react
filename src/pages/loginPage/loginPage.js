@@ -3,14 +3,19 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import config from '../../config';
 import authServices from '../../services/authServices';
-import validator from  '../../services/validator';
+import validator from '../../services/validator';
 import './login-style.css';
 class login extends React.Component {
 	constructor() {
 		super();
 		this.state = {
 			btnDisable: true,
-			errorMessage:''
+			errorMessage: {
+				userNameError: '',
+				passwordError: ''
+			},
+			userError: false,
+			passwordError: false
 		};
 	}
 
@@ -33,28 +38,34 @@ class login extends React.Component {
 			.catch((err) => console.log(err.response));
 	};
 
-	onBlurHandler = (e) => {
+	onInputHandler = (e) => {
 		e.preventDefault();
-		//console.log(this.state.btnDisable)
-	const user_name = document.querySelector(".user_name");
-	const password = document.querySelector(".password");
 
-	const userNameStatus = validator.userNameValidator(user_name);
-	const passWordStatus = validator.userNameValidator(password);
+		const user_name = document.querySelector('.user_name');
+		const password = document.querySelector('.password');
 
-	if(!userNameStatus.status || !passWordStatus.status){	
-		console.log("flase");
+		const userNameStatus = validator.userNameValidator(user_name.value);
+		const passWordStatus = validator.passwordValidator(password.value);
 
-	return	this.setState({btnDisable:false})
-	}	
-	else{
-		
-		this.setState({btnDisable:true})		 
-		this.setState({errorMessage:userNameStatus.errorMessage})
-	}
-	
+		const error = {
+			userNameError: userNameStatus.errorMessage || '',
+			passwordError: passWordStatus.errorMessage || ''
+		};
 
-	};	
+		if (!userNameStatus.status && !passWordStatus.status) {
+			return this.setState({ btnDisable: false, userError: false, passwordError: false });
+		}
+		if (userNameStatus.status) {
+			this.setState({ userError: userNameStatus.status });
+		} else if (passWordStatus.status) {
+			console.log(passWordStatus.status);
+			this.setState({ passwordError: passWordStatus.status });
+		}
+
+		this.setState({ btnDisable: true });
+
+		this.setState({ errorMessage: error });
+	};
 
 	render() {
 		return (
@@ -62,27 +73,28 @@ class login extends React.Component {
 				<Container>
 					<Row>
 						<Col>
-							<Form onSubmit={this.onSubmitHandler} onBlur={this.onBlurHandler}>
+							{this.state.userError ? <div>{this.state.errorMessage.userNameError} </div> : <div />}
+
+							{this.state.passwordError ? <div>{this.state.errorMessage.passwordError}</div> : <div />}
+							<Form onSubmit={this.onSubmitHandler} onBlur={this.onInputHandler}>
 								<Form.Group controlId="formBasicEmail">
-									<Form.Label>User Name</Form.Label>										
-								
-									<Form.Label> {this.state.errorMessage}</Form.Label>
+									<Form.Label>User Name</Form.Label>
+
 									<Form.Control placeholder="User Name" name="user_name" className="user_name" />
 								</Form.Group>
 
 								<Form.Group controlId="formBasicPassword">
 									<Form.Label>Password</Form.Label>
-									<Form.Label>{this.state.errorMessage}</Form.Label>
-									<Form.Control type="password" placeholder="Password" name="password" className="password"/>
-								</Form.Group>
-								{console.log(this.state.errorMessage) }
 
-								<Button
-									variant="primary"
-									type="submit"
-									style={{ width: '150px', margin: '0 auto' }}
-									disabled={this.state.btnDisable}
-								>
+									<Form.Control
+										type="password"
+										placeholder="Password"
+										name="password"
+										className="password"
+									/>
+								</Form.Group>
+
+								<Button variant="primary" type="submit" style={{ width: '150px', margin: '0 auto' }}>
 									Login
 								</Button>
 							</Form>
