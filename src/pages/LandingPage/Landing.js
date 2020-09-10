@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import { Carousel, Row, Container, Col } from 'react-bootstrap'
+import { Carousel, Row, Container, Col, Button } from 'react-bootstrap'
 import guys from '../../img/guys.jpg'
 import shirt from '../../img/shirt.jpg'
 import volunteer from '../../img/volunteer.jpg'
 import scu from '../../img/SCU.png'
-import { FaHeadset, FaFlask, FaFacebook, FaYoutube, FaTwitter } from 'react-icons/fa'
+import { FaHeadset, FaFlask, FaFacebook, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { FiMonitor } from 'react-icons/fi'
+import { Link } from 'react-router'
 import './landing.css'
+import TeamMember from './TeamMember'
 
-const Landing = () => {
+const Landing = (props) => {
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
@@ -27,18 +29,20 @@ const Landing = () => {
                         backgroundSize: 'cover'
                     }}>
                         <img
-                            className="h-25 d-block w-100 "
+                            className="d-block w-100"
                             src={volunteer}
+                            style={{ opacity: '0.8' }}
                             alt="First sliimport scu from '../img/SCU.png'
                             de"
                         />
                         <Carousel.Caption style={{
                             transform: 'translateY(-50%)',
                             bottom: '0',
-                            top: '50%'
+                            top: '50%',
+                            zIndex: '4'
                         }}>
-                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}>First slide label</h1>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '10vw', color: '#FFFFFF' }}>First slide label</h1>
+                            <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item style={{
@@ -47,44 +51,56 @@ const Landing = () => {
                         backgroundSize: 'cover'
                     }}>
                         <img
-                            className="h-25 d-block w-100 "
+                            className="d-block w-100 "
                             src={guys}
+                            style={{ opacity: '0.8' }}
                             alt="Second slide"
                         />
 
                         <Carousel.Caption style={{
                             transform: 'translateY(-50%)',
                             bottom: '0',
-                            top: '50%'
+                            top: '50%',
+                            zIndex: '4'
                         }}>
-                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}>Second slide label</h1>
-                            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '10vw', color: '#FFFFFF' }}>Second slide label</h1>
+                            <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="h-25 d-block w-100 "
+                            className="d-block w-100 "
                             src={shirt}
+                            style={{ opacity: '0.8' }}
                             alt="Third slide"
                         />
 
                         <Carousel.Caption style={{
                             transform: 'translateY(-50%)',
                             bottom: '0',
-                            top: '50%'
+                            top: '50%',
+                            zIndex: '4'
                         }}>
-                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}>Third slide label</h1>
-                            <p >
+                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '10vw', color: '#FFFFFF' }}>Third slide label</h1>
+                            <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>
                                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                </p>
+                            </p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
             </Row>
             <Row style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '100px', backgroundColor: '#F5F7FD' }}>
-                <h1 className="display-4" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}>Who we are</h1>
-                <span>- THE WAY WE WORK IS FUN -</span>
-                <p className="text-center">We are a fully in-house digital agency focusing on branding, marketing, web design and development with clients ranging from start-ups, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius quam ut magna ultricies pellentesque</p>
+                <h1 className="text-center" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Who We Are</strong></h1>
+                <span className="mt-4 mb-4" style={{ fontSize: "18px", color: '#777777', fontStyle: 'bold' }}>- THE WAY WE WORK IS FUN -</span>
+                <p className="text-center mb-4" style={{ fontSize: "18px", color: '#96979B' }}>We are a fully in-house digital agency focusing on branding, marketing, web design and development with clients ranging from start-ups, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius quam ut magna ultricies pellentesque</p>
+                <div className="d-flex">
+                    <div className="mr-4 rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
+                        <FaFacebook size={50} onClick={() => window.open("https://www.facebook.com/silvercityuprising/", "_blank")} />
+                    </div>
+                    <div className="rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
+                        <FaInstagram size={50} onClick={() => window.open("https://www.instagram.com/silvercityuprising/", "_blank")} />
+                    </div>
+                </div>
             </Row>
             <Row className="">
                 <div className="col-md-6">
@@ -92,122 +108,102 @@ const Landing = () => {
                 </div>
                 <div className="col-md-6  d-flex align-items-start justify-content-center" style={{ flexDirection: 'column' }}>
 
-                    <h2 className="h3 mb-3">What We Do</h2>
-                    <p>We develop big ideas that sell</p>
+                    <h2 className="mb-2 mt-4" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>What We Do</strong></h2>
+                    <span><strong>We empower youths to achieve better future</strong></span>
                     <hr />
                     <div className="d-flex" style={{ flexDirection: 'column', fontFamily: 'sans-serif', fontStyle: 'bold' }}>
                         <div className="d-flex">
                             <FaFlask color="#D42E22" size={80} />
                             <div className="d-flex ml-4" style={{ flexDirection: 'column' }}>
-                                <h3>Creative Design</h3>
-                                <p>Designing a good website that accommodates a lot of content is a tricky balancing act to pull off.</p>
+                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Internships</strong></h6>
+                                <p style={{ color: '#96979B' }}>Designing a good website that accommodates a lot of content is a tricky balancing act to pull off.</p>
                             </div>
                         </div>
                         <div className="d-flex">
                             <FiMonitor color="#D42E22" size={80} />
                             <div className="d-flex ml-4" style={{ flexDirection: 'column' }}>
-                                <h3>Web Developing</h3>
-                                <p>We build mobile apps for the conference, integrating unique content and branding to create.</p>
+                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Trainings</strong></h6>
+                                <p style={{ color: '#96979B' }}>We build mobile apps for the conference, integrating unique content and branding to create.</p>
                             </div>
                         </div>
                         <div className="d-flex">
                             <FaHeadset color="#D42E22" size={80} />
                             <div className="d-flex ml-4" style={{ flexDirection: 'column' }}>
-                                <h3>Marketing Support</h3>
-                                <p>Google has made this important since 1998 when it launched. Content became, and still is king since websites.</p>
+                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Neighbourhood Cleanings</strong></h6>
+                                <p style={{ color: '#96979B' }}>Google has made this important since 1998 when it launched. Content became, and still is king since websites.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </Row>
             <Row style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '100px', backgroundColor: '#F5F7FD' }}>
-                <h1 className="display-4" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}>Who we are</h1>
-                <span>- THE WAY WE WORK IS FUN -</span>
+                <h1 className="text-center" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Who We Are</strong></h1>
+                <span>- THE WORLD AT YOUR FINGERTIPS -</span>
                 <div className="mt-5 d-flex flex-wrap">
                     <div className="col-12 col-md-3  d-flex justify-content-center align-items-center" style={{ flexDirection: 'column' }}>
                         <div className="rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
                             <FiMonitor size={50} />
                         </div>
                         <h6 className="mt-4 text-center text-bold" style={{ fontFamily: 'sans-serif' }}><strong>WEB DESIGN</strong></h6>
-                        <p className="text-center" style={{ fontFamily: 'sans-serif' }}>Designing a good website that accommodates a lot of content is a tricky balancing act to pull off.</p>
+                        <p className="text-center" style={{ fontFamily: 'sans-serif', color: '#96979B' }}>Designing a good website that accommodates a lot of content is a tricky balancing act to pull off.</p>
                     </div>
                     <div className="col-12 col-md-3  d-flex justify-content-center align-items-center" style={{ flexDirection: 'column' }}>
                         <div className="rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
                             <FaFacebook color="" size={50} />
                         </div>
                         <h6 className="mt-4 text-center text-bold" style={{ fontFamily: 'sans-serif' }}><strong>APP DEVELOPMENT</strong></h6>
-                        <p className="text-center" style={{ fontFamily: 'sans-serif' }}>We build mobile apps for the conference, integrating unique content and branding to create.</p>
+                        <p className="text-center" style={{ fontFamily: 'sans-serif', color: '#96979B' }}>We build mobile apps for the conference, integrating unique content and branding to create.</p>
                     </div>
                     <div className="col-12 col-md-3  d-flex justify-content-center align-items-center" style={{ flexDirection: 'column' }}>
                         <div className="rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
                             <FaYoutube color="" size={50} />
                         </div>
                         <h6 className="mt-4 text-center text-bold" style={{ fontFamily: 'sans-serif' }}><strong>DIGITAL MARKETING</strong></h6>
-                        <p className="text-center" style={{ fontFamily: 'sans-serif' }}>Google has made this important since 1998 when it launched. Content became, and still is king since websites.</p>
+                        <p className="text-center" style={{ fontFamily: 'sans-serif', color: '#96979B' }}>Google has made this important since 1998 when it launched. Content became, and still is king since websites.</p>
                     </div>
                     <div className="col-12 col-md-3  d-flex justify-content-center align-items-center" style={{ flexDirection: 'column' }}>
                         <div className="rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
                             <FaTwitter color="" size={50} />
                         </div>
                         <h6 className="mt-4 text-center text-bold" style={{ fontFamily: 'sans-serif' }}><strong>UI / UX FRIENDLY</strong></h6>
-                        <p className="text-center" style={{ fontFamily: 'sans-serif' }}>UX design refers to the term user experience design, while UI design stands for user interface design.</p>
+                        <p className="text-center" style={{ fontFamily: 'sans-serif', color: '#96979B' }}>UX design refers to the term user experience design, while UI design stands for user interface design.</p>
                     </div>
                 </div>
             </Row>
             <Row style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '100px', backgroundColor: '#fffff' }}>
-                <h1 className="display-4" style={{ fontFamily: 'sans-serif' }}> <strong>MEET OUR TEAM</strong></h1>
-                <span>- WE ARE STRONGER -</span>
+                <h1 className="mb-2 text-center" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}> <strong>MEET OUR TEAM</strong></h1>
+                <span className="mb-4">- WE ARE STRONGER -</span>
                 <div className="d-flex flex-wrap">
-                    <div className="col-md-3 container">
-                        <img src={scu} alt="Avatar" className="image" style={{ width: "100%" }} />
-                        <div className="middle">
-                            <div className="text"><strong>John Doe</strong></div>
-                            <div className="text1">Software Engineer</div>
-                            <div className="d-flex justify-content-between">
-                                <FaFacebook color="#ffffff" size={15} className="mr-2" />
-                                <FaYoutube color="#ffffff" size={15} className="mr-2" />
-                                <FaTwitter color="#ffffff" size={15} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3 container">
-                        <img src={scu} alt="Avatar" className="image" style={{ width: "100%" }} />
-                        <div className="middle">
-                            <div className="text"><strong>Chris Rivee</strong></div>
-                            <div className="text1">Social Media Manager</div>
-
-                            <div className="d-flex justify-content-between">
-                                <FaFacebook color="#ffffff" size={15} className="mr-2" />
-                                <FaYoutube color="#ffffff" size={15} className="mr-2" />
-                                <FaTwitter color="#ffffff" size={15} />
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="col-md-3 container">
-                        <img src={scu} alt="Avatar" className="image" style={{ width: "100%" }} />
-                        <div className="middle">
-                            <div className="text"><strong>Hari Skae</strong></div>
-                            <div className="text1">Director</div>
-                            <div className="d-flex justify-content-between">
-                                <FaFacebook color="#ffffff" size={15} className="mr-2" />
-                                <FaYoutube color="#ffffff" size={15} className="mr-2" />
-                                <FaTwitter color="#ffffff" size={15} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3 container">
-                        <img src={scu} alt="Avatar" className="image" style={{ width: "100%" }} />
-                        <div className="middle">
-                            <div className="text"><strong>Garry Gile</strong></div>
-                            <div className="text1">Moderator</div>
-                            <div className="d-flex justify-content-between">
-                                <FaFacebook color="#ffffff" size={15} className="mr-2" />
-                                <FaYoutube color="#ffffff" size={15} className="mr-2" />
-                                <FaTwitter color="#ffffff" size={15} />
-                            </div>
-                        </div>
-                    </div>
+                    <TeamMember
+                        name="John Doe"
+                        title="Software Engineer"
+                        img={scu}
+                    />
+                    <TeamMember
+                        name="Chris Rivee"
+                        title="Social Media Manager"
+                        img={scu}
+                    />
+                    <TeamMember
+                        name="Hari Skae"
+                        title="Director"
+                        img={scu}
+                    />
+                    <TeamMember
+                        name="Garry Gile"
+                        title="Moderator"
+                        img={scu}
+                    />
+                </div>
+            </Row>
+            <Row style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '100px', backgroundColor: '#F5F7FD' }}>
+                <h1 className="mb-2 text-center" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}> <strong>Become A Member Today!</strong></h1>
+                <span>- Let's Work Together -</span>
+                <div className="d-flex align-items-center justify-content-center mt-4 rounded" style={{ flexDirection: 'column', padding: "20px", backgroundColor: '#000000' }}>
+                    <span className="mb-4 text-center" style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                        You will become a part of the movement to see change in our community by using all our efforts and resources to rebuild, uplift and educate our youths or adults who may need assistance. Join now!
+                    </span>
+                    <Button variant="danger">Join Us</Button>
                 </div>
             </Row>
         </Container>
@@ -215,40 +211,3 @@ const Landing = () => {
 }
 
 export default Landing
-
-
-{/* <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-                    <div className="container">
-
-                        <a className="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-                            <strong>MDB</strong>
-                        </a>
-
-
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-
-
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-
-                            <ul className="navbar-nav mr-auto">
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="#">Home
-              <span className="sr-only">(current)</span>
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank">Free download</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav> */}
