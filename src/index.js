@@ -2,13 +2,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Home from './pages/Home';
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import './index.css';
-import { BrowserRouter, Switch, Route, Link, useParams } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown, NavItem, NavLink, FormControl, Button } from 'react-bootstrap';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 import AppHeader from './components/AppHeader';
 import Login from './pages/loginPage/loginPage';
+import Signup from './pages/signup';
 import Contact from './pages/Contact';
 import Founders from './pages/Founders';
 import Mission from './pages/Mission';
@@ -24,7 +25,8 @@ ReactDOM.render(
 		<div>
 			<AppHeader />
 			<Route exact path="/" component={App} />
-      <Route exact path="/login" component={(props)=><Login {...props}/>}/>
+			<Route exact path="/login" component={(props) => <Login {...props} />} />
+			<Route exact path="/signup" component={(props) => <Signup {...props} />} />
 			<Route path="/founders" component={Founders} />
 			<Route path="/contact" component={Contact} />
 			<Route path="/mission" component={Mission} />

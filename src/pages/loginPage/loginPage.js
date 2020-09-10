@@ -105,7 +105,7 @@ class login extends React.Component {
 							<p className="px-5  text-center">
 								Gain access to our programs and be part of the movment to see change in our community
 							</p>
-							<Button variant="secondary joinUs-btn">Join Us</Button>
+							<Button variant="secondary joinUs-btn" onClick={()=>this.props.history.push('/signup')}>Join Us</Button>
 						</Col>
 					</Row>
 				</Container>
