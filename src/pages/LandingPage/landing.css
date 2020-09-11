@@ -29,6 +29,24 @@
     text-align: center;
     border: 5px solid #212121;
   }
+
+  .carousel .carousel-item {
+    height: 500px;
+  }
+  
+  .carousel-item img {
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+  }
+  
+  .service-img{
+    width:'20px';
+    height: '20px';
+  }
+  
+
   .change{
     border: 5px solid #FFFFFF;
   }
