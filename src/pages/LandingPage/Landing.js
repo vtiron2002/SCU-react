@@ -145,7 +145,7 @@ const Landing = (props) => {
                     <span className="mb-4 text-center" style={{ color: '#FFFFFF', fontSize: '20px' }}>
                         You will become a part of the movement to see change in our community by using all our efforts and resources to rebuild, uplift and educate our youths or adults who may need assistance. Join now!
                     </span>
-                    <Button variant="danger" size="lg">Join Us</Button>
+                    <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Join Us</Button>
                 </div>
             </Row>
         </Container>
