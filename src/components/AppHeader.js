@@ -53,7 +53,7 @@ function BootstrapNavbar() {
                     <NavDropdown.Item href="/volunteer">Volunteer Opportunities</NavDropdown.Item>
                     <NavDropdown.Item href="/events">Public Events</NavDropdown.Item>
                     <NavDropdown.Item href="/member">Become A Member</NavDropdown.Item>
-                    </NavDropdown>
+                  </NavDropdown>
                   <Nav.Link href="/news">News</Nav.Link>
                   <Nav.Link href="/contact">Contact</Nav.Link>
                   <DonateLink href="https://www.flipcause.com/widget/OTIyNjU=">Donate</DonateLink>

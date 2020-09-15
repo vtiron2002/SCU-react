@@ -31,7 +31,7 @@
   }
 
   .carousel .carousel-item {
-    height: 500px;
+    height: 620px;
   }
   
   .carousel-item img {
@@ -73,3 +73,30 @@
     font-size: 12px;
   }
   
+  .call-button{
+    background-color: transparent;
+    border-color: white;
+    border-width: 2px;
+  }
+
+.call-button:hover{
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+/* .navbar {
+  background:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  color:'white';
+  top: 0;
+  z-index: 999;
+}
+
+.navbar.active {
+  background:'white';
+  color:'black'
+} */

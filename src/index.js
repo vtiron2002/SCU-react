@@ -20,7 +20,7 @@ import TaskForce from './pages/TaskForce';
 import Events from './pages/Events';
 import Landing from './pages/LandingPage/Landing'
 
-
+import Nav from './pages/LandingPage/Navbar'
 
 
 
@@ -28,8 +28,8 @@ ReactDOM.render(
   <BrowserRouter>
 
     <div>
-      <AppHeader />
-
+      {/* <AppHeader /> */}
+      <Nav />
       <Route exact path="/" component={Landing} />
       <Route path="/founders" component={Founders} />
       <Route path="/contact" component={Contact} />

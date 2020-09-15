@@ -8,9 +8,10 @@ import scuFace from '../../img/SCU-face.png'
 import internship from '../../img/internship-active.png'
 import neighbourhoodCleaning from '../../img/neighborhoodcleanup-active.png'
 import training from '../../img/training-active.png'
-import { FaHeadset, FaFlask, FaFacebook, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaHeadset, FaFlask, FaFacebook, FaHandshake, FaInstagram } from 'react-icons/fa'
 import './landing.css'
 import TeamMember from './TeamMember'
+import Nav from './Navbar'
 
 const Landing = (props) => {
     const [index, setIndex] = useState(0);
@@ -45,6 +46,8 @@ const Landing = (props) => {
                         }}>
                             <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>First slide label</h1>
                             <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Learn More</Button>
+                            <Button size="lg" className="call-button" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Our Programs</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item style={{
@@ -67,6 +70,8 @@ const Landing = (props) => {
                         }}>
                             <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>Second slide label</h1>
                             <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Learn More</Button>
+                            <Button size="lg" className="call-button" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Our Programs</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -87,6 +92,8 @@ const Landing = (props) => {
                             <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>
                                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                             </p>
+                            <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Learn More</Button>
+                            <Button size="lg" className="call-button" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Our Programs</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -141,8 +148,12 @@ const Landing = (props) => {
             <Row style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '100px', backgroundColor: '#F5F7FD' }}>
                 <h1 className="mb-2 text-center" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}> <strong>Become A Member Today!</strong></h1>
                 <span>- Let's Work Together -</span>
-                <div className="d-flex align-items-center justify-content-center mt-4 rounded" style={{ flexDirection: 'column', padding: "20px", backgroundColor: '#000000' }}>
-                    <span className="mb-4 text-center" style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                <FaHandshake size={100} />
+                <div className="d-flex align-items-center justify-content-center mt-2 rounded" style={{
+                    flexDirection: 'column', padding: "20px", backgroundColor: '#0093E9', backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)"
+                }}>
+
+                    <span className="mb-4 text-center" style={{ color: '#fff', fontSize: '20px' }}>
                         You will become a part of the movement to see change in our community by using all our efforts and resources to rebuild, uplift and educate our youths or adults who may need assistance. Join now!
                     </span>
                     <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Join Us</Button>
@@ -153,3 +164,4 @@ const Landing = (props) => {
 }
 
 export default Landing
+
