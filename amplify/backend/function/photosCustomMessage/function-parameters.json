@@ -1,0 +1,24 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "photos",
+  "functionName": "photosCustomMessage",
+  "resourceName": "photosCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "roleName": "photosCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "https://silvercityuprising.com/",
+  "EMAILSUBJECT": "Account Conformation",
+  "EMAILMESSAGE": "",
+  "RESOURCENAME": "resourceName"
+}

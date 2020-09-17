@@ -10,6 +10,25 @@
       "StackName": "amplify-frontend-dev-22635",
       "StackId": "arn:aws:cloudformation:us-east-1:043464898196:stack/amplify-frontend-dev-22635/bff13870-f3f7-11ea-a7cd-0af8d25392ed",
       "AmplifyAppId": "dbxe4bre8x2me"
+    },
+    "categories": {
+      "function": {
+        "photosDefineAuthChallenge": {},
+        "photosCreateAuthChallenge": {},
+        "photosVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "6LcHVMwZAAAAAEmQWg0GW2ayxRDQI_uCwsJPOVZP"
+        },
+        "photosCustomMessage": {
+          "REDIRECTURL": "https://silvercityuprising.com/",
+          "EMAILSUBJECT": "Account Conformation",
+          "EMAILMESSAGE": ""
+        }
+      },
+      "auth": {
+        "photos": {
+          "hostedUIProviderCreds": "[]"
+        }
+      }
     }
   }
 }

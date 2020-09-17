@@ -1,0 +1,106 @@
+{
+    "identityPoolName": "frontendb6ab295f_identitypool_b6ab295f",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "fronteb6ab295f",
+    "userPoolName": "photoGallery",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "birthdate",
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "userpoolClientLambdaRole": "photosb6ab295f_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "sharedId": "b6ab295f",
+    "resourceName": "photos",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "manual",
+    "thirdPartyAuth": false,
+    "userPoolGroups": true,
+    "adminQueries": true,
+    "triggers": "{\n  \"DefineAuthChallenge\": [\n    \"captcha-define-challenge\"\n  ],\n  \"CreateAuthChallenge\": [\n    \"captcha-create-challenge\"\n  ],\n  \"VerifyAuthChallengeResponse\": [\n    \"captcha-verify\"\n  ],\n  \"CustomMessage\": [\n    \"verification-link\"\n  ]\n}",
+    "hostedUI": true,
+    "hostedUIDomainName": "scu",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://silvercityuprising.com/\"],\"LogoutURLs\":[\"https://silvercityuprising.com/\"]}",
+    "userPoolGroupList": [
+        "gallery"
+    ],
+    "serviceName": "Cognito",
+    "verificationBucketName": "photosverificationbucket",
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "photosDefineAuthChallenge",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "photosCreateAuthChallenge",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "photosVerifyAuthChallengeResponse",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "photosCustomMessage",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        }
+    ]
+}
