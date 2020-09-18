@@ -30,7 +30,7 @@ const NavBar = () => {
     const [navBar, setNavBar] = useState(false)
 
     const changeBackground = () => {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 20) {
             setNavBar(true)
         } else {
             setNavBar(false)
@@ -41,9 +41,10 @@ const NavBar = () => {
 
     return (
         // <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-        <Navbar className="navbar  navbar-expand-lg scrolling-navbar justify-content-between fixed-top" style={{
-            background: navBar ? 'white' : 'transparent',
-            transition: navBar ? '1s ease' : ''
+        <Navbar className="navbar navbar-expand-lg scrolling-navbar justify-content-between fixed-top" style={{
+            borderBottom: navBar ? '1px solid #000000' : '5px',
+            background: navBar ? 'white' : '',
+            transition: navBar ? '0.75s ease' : '',
         }}>
             <Navbar.Brand id="navbar-brand" href="/">
                 <img style={{ width: '120px' }} src={logo} alt="logo" />
