@@ -4,12 +4,6 @@ import { styled } from '@material-ui/core/styles';
 import logo from '../../img/newlogo-sm.png';
 import loginPic from '../../img/login.png';
 
-// const Navbar = styled(BaseNavbar)({
-//     width: '100%',
-//     fontSize: '18px',
-//     color: 'white'
-// })
-
 const Nav = styled(BaseNav)({
     display: 'flex',
     width: '100%',
@@ -47,29 +41,29 @@ const NavBar = () => {
             transition: navBar ? '0.75s ease' : '',
         }}>
             <Navbar.Brand id="navbar-brand" href="/">
-                <img style={{ width: '120px' }} src={logo} alt="logo" />
+                <img style={{ width: '120px', background: 'white', padding: '10px', borderRadius: '5px' }} src={logo} alt="logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" style={{ fontWeight: 'bold', color: 'white' }}>
+            <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
-                    <NavDropdown title="Our Programs" id="basic-nav-dropdown">
+                    <NavDropdown title={<span style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>Our Programs</span>} id="basic-nav-dropdown">
                         <NavDropdown.Item href="/training" >Training</NavDropdown.Item>
                         <NavDropdown.Item href="/taskForce">Volunteer Task Force</NavDropdown.Item>
                     </NavDropdown>
-                    <NavDropdown title="About Us" id="basic-nav-dropdown">
+                    <NavDropdown title={<span style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>About Us</span>} id="basic-nav-dropdown">
                         <NavDropdown.Item href="/mission">Our Mission</NavDropdown.Item>
                         <NavDropdown.Item href="/founders">Our Staff</NavDropdown.Item>
                     </NavDropdown>
-                    <NavDropdown title="Get Involved" id="basic-nav-dropdown">
+                    <NavDropdown title={<span style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>Get Involved</span>} id="basic-nav-dropdown">
                         <NavDropdown.Item href="/volunteer">Volunteer Opportunities</NavDropdown.Item>
                         <NavDropdown.Item href="/events">Public Events</NavDropdown.Item>
                         <NavDropdown.Item href="/member">Become A Member</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/news">News</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link href="/news" style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>News</Nav.Link>
+                    <Nav.Link href="/contact" style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>Contact</Nav.Link>
                     <DonateLink href="https://www.flipcause.com/widget/OTIyNjU=">Donate</DonateLink>
                     <Nav.Link href="/login">
-                        <img style={{ width: '32px' }} src={loginPic} alt="loginpic" />
+                        <img style={{ width: '32px', borderRadius: '25px' }} src={loginPic} alt="loginpic" />
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>

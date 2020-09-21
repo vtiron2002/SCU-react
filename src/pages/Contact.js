@@ -42,10 +42,10 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <section style={{ marginTop: '100px' }} id="contact">
+      <section id="contact">
         <div className="jumbotron jumbotron-fluid contact" style={{ color: '#f8f9fa', fontWeight: 'bolder', background: 'black' }}>
           <div className="container">
-            <center><h1 className="display-4">Contact SCU</h1></center>
+            <center><h1 className="display-4" style={{ marginTop: '100px' }}>Contact SCU</h1></center>
           </div>
         </div>
 

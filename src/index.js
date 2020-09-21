@@ -43,6 +43,7 @@ ReactDOM.render(
         <Route path="/taskForce" component={TaskForce} />
         <Route path="/events" component={Events} />
         <Route path="/login" component={Login} />
+        <Route path="/member" component={Events} />
 
       </div>
     </Switch>

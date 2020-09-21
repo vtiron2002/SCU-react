@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Carousel, Row, Container, Col, Button } from 'react-bootstrap'
-import guys from '../../img/guys.jpg'
+import mentor from '../../img/mentor.jpg'
 import volunteer from '../../img/volunteer.jpg'
 import scu from '../../img/SCU.png'
-import learning from '../../img/learning1.jpg'
+import cleanup from '../../img/cleanup.jpg'
 import scuFace from '../../img/SCU-face.png'
 import internship from '../../img/internship-active.png'
 import neighbourhoodCleaning from '../../img/neighborhoodcleanup-active.png'
@@ -33,8 +33,8 @@ const Landing = (props) => {
                     }}>
                         <img
                             className="d-block w-100 img"
-                            src={learning}
-                            style={{ opacity: '0.8' }}
+                            src={mentor}
+                            style={{ opacity: '0.9' }}
                             alt="First sliimport scu from '../img/SCU.png'
                             de"
                         />
@@ -57,8 +57,8 @@ const Landing = (props) => {
                     }}>
                         <img
                             className="d-block w-100 "
-                            src={guys}
-                            style={{ opacity: '0.8' }}
+                            src={cleanup}
+                            style={{ opacity: '0.9' }}
                             alt="Second slide"
                         />
 
@@ -78,7 +78,7 @@ const Landing = (props) => {
                         <img
                             className="d-block w-100 "
                             src={volunteer}
-                            style={{ opacity: '0.8' }}
+                            style={{ opacity: '0.9' }}
                             alt="Third slide"
                         />
 

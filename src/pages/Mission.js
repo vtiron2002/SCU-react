@@ -5,15 +5,18 @@ import '../App.css';
 
 const Mission = () => {
   return (
-    <Container style={{ marginTop: '120px' }}>
+    <section >
+      <div className="jumbotron jumbotron-fluid contact" style={{ color: '#f8f9fa', fontWeight: 'bolder', background: 'black' }}>
+        <div className="container">
+          <center><h1 className="display-4" style={{ marginTop: '100px' }}>Our Mission</h1></center>
+        </div>
+      </div>
       <Row>
         <Col>
           <div>
             <div className="container" id="about_page">
               <div className="row">
                 <div className="col">
-                  <h3>Mission</h3>
-                  <br />
                   <p>To create, build and promote healthy thriving businesses within the black community, to positively
                   contribute to the economic empowerment, growth and development of the black community for this
               generation and future generations.</p>
@@ -39,7 +42,7 @@ const Mission = () => {
           </div>
         </Col>
       </Row>
-    </Container>
+    </section>
   );
 }
 

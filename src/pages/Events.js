@@ -5,8 +5,12 @@ import '../App.css';
 
 const Events = () => {
   return (
-    <Container className="mb-5" style={{ marginTop: '100px' }}>
-      <center><h1 className="mb-5">Public Events</h1></center>
+    <section className="mb-5" >
+      <div className="jumbotron jumbotron-fluid contact" style={{ color: '#f8f9fa', fontWeight: 'bolder', background: 'black' }}>
+        <div className="container">
+          <center><h1 className="display-4" style={{ marginTop: '100px' }}>Public Events</h1></center>
+        </div>
+      </div>
       <Row>
         <Col>
           <Card className="text-center" style={{ width: '18rem' }}>
@@ -51,7 +55,7 @@ Location:Soulbaila 735 Wethersfield Avenue Hartford, CT 06114
           </Card>
         </Col>
       </Row>
-    </Container>
+    </section>
   );
 }
 

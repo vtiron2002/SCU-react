@@ -5,7 +5,12 @@ import '../App.css';
 
 const Mission = () => {
   return (
-    <Container style={{ marginTop: '120px' }}>
+    <section>
+      <div className="jumbotron jumbotron-fluid contact" style={{ color: '#f8f9fa', fontWeight: 'bolder', background: 'black' }}>
+        <div className="container">
+          <center><h1 className="display-4" style={{ marginTop: '100px' }}>SCU  Training  Program</h1></center>
+        </div>
+      </div>
       <Row>
         <Col>
 
@@ -14,7 +19,6 @@ const Mission = () => {
               <div className="col">
                 <div className="jumbotron jumbotron-fluid customjumbotron customTraining">
                   <div className="container">
-                    <h1 className="display-4">SCU TRAINING PROGRAM</h1>
                     <br /><br />
                   </div>
                 </div>
@@ -80,7 +84,7 @@ const Mission = () => {
           </div>
         </Col>
       </Row>
-    </Container>
+    </section>
   );
 }
 
