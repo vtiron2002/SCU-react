@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-class Contact extends React.Component{
+class Contact extends React.Component {
   constructor(props) {
-	  super(props);
+    super(props);
     this.state = {
       name: '',
       email: '',
@@ -19,33 +19,33 @@ class Contact extends React.Component{
       // .catch(err => {
       //   console.error(err);
       // });
-    // axios({
-    //   method: "POST",
-    //   url: "/api/contact",
-    //   baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
-    //   data:  this.state
-    .then((response) => {
-      if (response.data.status === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
-      } else if(response.data.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    }).catch((err) => {
-      console.log(err);
-    })
+      // axios({
+      //   method: "POST",
+      //   url: "/api/contact",
+      //   baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
+      //   data:  this.state
+      .then((response) => {
+        if (response.data.status === 'success') {
+          alert("Message Sent.");
+          this.resetForm()
+        } else if (response.data.status === 'fail') {
+          alert("Message failed to send.")
+        }
+      }).catch((err) => {
+        console.log(err);
+      })
   }
 
-  resetForm(){
-     this.setState({name: "", email: "", message: ""})
+  resetForm() {
+    this.setState({ name: "", email: "", message: "" })
   }
 
   render() {
-    return(
+    return (
       <section id="contact">
-        <div className="jumbotron jumbotron-fluid contact" style={{color: '#f8f9fa', fontWeight: 'bolder', background: 'black'}}>
+        <div className="jumbotron jumbotron-fluid contact" style={{ color: '#f8f9fa', fontWeight: 'bolder', background: 'black' }}>
           <div className="container">
-            <center><h1 className="display-4">Contact SCU</h1></center>
+            <center><h1 className="display-4" style={{ marginTop: '100px' }}>Contact SCU</h1></center>
           </div>
         </div>
 
@@ -56,21 +56,21 @@ class Contact extends React.Component{
               <p className="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will get back to you within
                 24-48 hours to assist you.</p>
 
-                <form className="mb-4" id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+              <form className="mb-4" id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                  <label htmlFor="name">Name</label>
+                  <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                  <label htmlFor="exampleInputEmail1">Email address</label>
+                  <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                  <label htmlFor="message">Message</label>
+                  <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+              </form>
             </div>
             <div className="col-md-6 text-center mt-2">
               <ul className="list-unstyled mb-0">
@@ -91,19 +91,19 @@ class Contact extends React.Component{
           </div>
         </div>
       </section>
-	);
+    );
   }
 
   onNameChange(event) {
-	  this.setState({ name: event.target.value })
+    this.setState({ name: event.target.value })
   }
 
   onEmailChange(event) {
-	  this.setState({ email: event.target.value })
+    this.setState({ email: event.target.value })
   }
 
   onMessageChange(event) {
-	  this.setState({ message: event.target.value })
+    this.setState({ message: event.target.value })
   }
 }
 

@@ -11,27 +11,27 @@ const News = () => {
         const abortController = new AbortController()
 
         axios({
-            "method":"GET",
-            "url":"https://bing-news-search1.p.rapidapi.com/news/search",
-            "headers":{
-            "content-type":"application/octet-stream",
-            "x-rapidapi-host":"bing-news-search1.p.rapidapi.com",
-            "x-rapidapi-key":"bff6c04355msh46e32c3afb8d323p1eaeedjsnbf048a37783e",
-            "x-bingapis-sdk":"true",
-            "useQueryString":true
-            },"params":{
-            "freshness":"Day",
-            "textFormat":"Raw",
-            "safeSearch":"Off",
-            "q":"blacklivesmatter"
+            "method": "GET",
+            "url": "https://bing-news-search1.p.rapidapi.com/news/search",
+            "headers": {
+                "content-type": "application/octet-stream",
+                "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
+                "x-rapidapi-key": "bff6c04355msh46e32c3afb8d323p1eaeedjsnbf048a37783e",
+                "x-bingapis-sdk": "true",
+                "useQueryString": true
+            }, "params": {
+                "freshness": "Day",
+                "textFormat": "Raw",
+                "safeSearch": "Off",
+                "q": "blacklivesmatter"
             }
+        })
+            .then((response) => {
+                // console.log(response.data.value)
+                setState(response.data.value)
             })
-            .then((response)=>{
-              // console.log(response.data.value)
-              setState(response.data.value)
-            })
-            .catch((error)=>{
-              console.log(error)
+            .catch((error) => {
+                console.log(error)
             })
 
         return () => { abortController.abort() }
@@ -42,7 +42,7 @@ const News = () => {
     return (
         <>
             <div className="header">
-                <h1 className="heading">Latest News</h1>
+                <h1 className="heading display-4" style={{ marginTop: '120px' }}>Latest News</h1>
             </div>
             <div className="cards-div">
                 {cards}
