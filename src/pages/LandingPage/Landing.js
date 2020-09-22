@@ -31,10 +31,10 @@ const Landing = (props) => {
                         WebkitBackgroundSize: 'cover',
                         backgroundSize: 'cover'
                     }}>
-                        <img
+                        <img className="img1"
                             className="d-block w-100 img"
                             src={mentor}
-                            style={{ opacity: '0.9' }}
+                            style={{ opacity: '0.7' }}
                             alt="First sliimport scu from '../img/SCU.png'
                             de"
                         />
@@ -44,21 +44,21 @@ const Landing = (props) => {
                             top: '50%',
                             zIndex: '4'
                         }}>
-                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>First slide label</h1>
-                            <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h1 className="c1" style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>Mentoring</h1>
+                            <p className="c1" style={{ fontSize: '4vw', color: '#FFFFFF' }}>Our Youth Elevation program mentors and trains indivisuals.</p>
                             <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Learn More</Button>
                             <Button size="lg" className="call-button" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Our Programs</Button>
                         </Carousel.Caption>
-                    </Carousel.Item>
+                     </Carousel.Item>
                     <Carousel.Item style={{
                         background: 'no-repeat center center scroll',
                         WebkitBackgroundSize: 'cover',
                         backgroundSize: 'cover'
                     }}>
-                        <img
+                        <img className="img1"
                             className="d-block w-100 "
                             src={cleanup}
-                            style={{ opacity: '0.9' }}
+                            style={{ opacity: '0.8' }}
                             alt="Second slide"
                         />
 
@@ -68,17 +68,18 @@ const Landing = (props) => {
                             top: '50%',
                             zIndex: '4'
                         }}>
-                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>Second slide label</h1>
-                            <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Learn More</Button>
+                            <h1 className="c1" style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '6vw', color: '#FFFFFF' }}>Community Empowerment</h1>
+                            <p className="c1" style={{ fontSize: '4vw', color: '#FFFFFF' }}>“If not us, then who? If not now, then when?” ~ John Lewis</p>
+                            <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Join Now</Button>
                             <Button size="lg" className="call-button" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Our Programs</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
+
                         <img
-                            className="d-block w-100 "
+                            className="d-block w-100"
                             src={volunteer}
-                            style={{ opacity: '0.9' }}
+                            style={{ opacity: '0.7' }}
                             alt="Third slide"
                         />
 
@@ -88,9 +89,9 @@ const Landing = (props) => {
                             top: '50%',
                             zIndex: '4'
                         }}>
-                            <h1 style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>Third slide label</h1>
-                            <p style={{ fontSize: '4vw', color: '#FFFFFF' }}>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            <h1 className="c1" style={{ fontFamily: 'sans-serif', fontStyle: 'bold', fontSize: '8vw', color: '#FFFFFF' }}>Volunteering</h1>
+                            <p className="c1" style={{ fontSize: '4vw', color: '#FFFFFF' }}>
+                                Our volunteer task force makes sure to rebuild and revitilize our community.
                             </p>
                             <Button variant="danger" size="lg" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')} style={{ marginRight: '20px' }}>Learn More</Button>
                             <Button size="lg" className="call-button" onClick={() => window.open('https://mailchi.mp/0d937b05404c/membership', '_blank')}>Our Programs</Button>
@@ -100,8 +101,8 @@ const Landing = (props) => {
             </Row>
             <Row style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '100px', backgroundColor: '#F5F7FD' }}>
                 <h1 className="text-center" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Who We Are</strong></h1>
-                <span className="mt-4 mb-4" style={{ fontSize: "18px", color: '#777777', fontStyle: 'bold' }}>- THE WAY WE WORK IS FUN -</span>
-                <p className="text-center mb-4" style={{ fontSize: "18px", color: '#96979B' }}>We want to create, build and promote healthy thriving businesses within the community, and positively contribute to the economic empowerment, growth and development of our community for this generation and future generations.</p>
+                <span className="mt-4 mb-4" style={{ fontSize: "18px", color: '#777777', fontStyle: 'bold' }}>- WE ARE SILVER CITY UPRISING -</span>
+                <p className="text-center mb-4" style={{ fontSize: "18px", color: '#96979B' }}>We want to create, build and promote empowerment within the community, and positively contribute to the youth through growth and mentorship. For this generation and the future generations to come.</p>
                 <div className="d-flex">
                     <div className="mr-4 rounded-circle shadow-lg change" style={{ backgroundColor: 'white', padding: '20px' }}>
                         <FaFacebook size={50} onClick={() => window.open("https://www.facebook.com/silvercityuprising/", "_blank")} />
@@ -118,28 +119,28 @@ const Landing = (props) => {
                 <div className="col-md-6  d-flex align-items-start justify-content-center" style={{ flexDirection: 'column' }}>
 
                     <h2 className="mb-2 mt-4" style={{ fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>What We Do</strong></h2>
-                    <span><strong>We empower youths to achieve better future</strong></span>
+                    <span><strong>We volunteer, mentor and train members to improve our mission of economic empowerment.</strong></span>
                     <hr />
                     <div className="d-flex" style={{ flexDirection: 'column', fontFamily: 'sans-serif', fontStyle: 'bold' }}>
                         <div className="d-flex">
                             <img className="service-img" src={internship} alt="scu-internship-image" style={{ width: '80px', height: '80px' }} />
                             <div className="d-flex ml-4" style={{ flexDirection: 'column' }}>
                                 <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Internships</strong></h6>
-                                <p style={{ color: '#96979B' }}>Designing a good website that accommodates a lot of content is a tricky balancing act to pull off.</p>
+                                <p style={{ color: '#96979B' }}>Gain real world experience while helping us improve our site and software for everyone to enjoy.</p>
                             </div>
                         </div>
                         <div className="d-flex">
                             <img className="service-img" src={training} alt="scu-training-image" style={{ width: '80px', height: '80px' }} />
                             <div className="d-flex ml-4" style={{ flexDirection: 'column' }}>
-                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Trainings</strong></h6>
-                                <p style={{ color: '#96979B' }}>We build mobile apps for the conference, integrating unique content and branding to create.</p>
+                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Training</strong></h6>
+                                <p style={{ color: '#96979B' }}>We will teach and mentor you in different subjects like Technology and Career Development.</p>
                             </div>
                         </div>
                         <div className="d-flex">
                             <img className="service-img" src={neighbourhoodCleaning} alt="scu-neighbourhood-cleanup-image" style={{ width: '80px', height: '80px' }} />
                             <div className="d-flex ml-4" style={{ flexDirection: 'column' }}>
-                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Neighbourhood Cleanings</strong></h6>
-                                <p style={{ color: '#96979B' }}>Google has made this important since 1998 when it launched. Content became, and still is king since websites.</p>
+                                <h6 style={{ color: '#212121', fontFamily: 'sans-serif', fontStyle: 'bold' }}><strong>Volunteering</strong></h6>
+                                <p style={{ color: '#96979B' }}>Cleaning up neighbourhoods to improve the community and make it more appealing for new businesses.</p>
                             </div>
                         </div>
                     </div>
@@ -164,4 +165,3 @@ const Landing = (props) => {
 }
 
 export default Landing
-

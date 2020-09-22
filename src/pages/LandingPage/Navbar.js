@@ -59,7 +59,7 @@ const NavBar = () => {
                         <NavDropdown.Item href="/events">Public Events</NavDropdown.Item>
                         <NavDropdown.Item href="/member">Become A Member</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/news" style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>News</Nav.Link>
+                  
                     <Nav.Link href="/contact" style={{ fontWeight: 'bold', color: navBar ? '#000000' : '#ffffff' }}>Contact</Nav.Link>
                     <DonateLink href="https://www.flipcause.com/widget/OTIyNjU=">Donate</DonateLink>
                     <Nav.Link href="/login">
