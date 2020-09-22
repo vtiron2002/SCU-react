@@ -12,33 +12,28 @@ class Contact extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    axios
-      .post('http://backend.silvercityuprising.com/api/contact', this.state)
-      // .then(() => console.log('success'))
-      // .catch(err => {
-      //   console.error(err);
-      // });
-      // axios({
-      //   method: "POST",
-      //   url: "/api/contact",
-      //   baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
-      //   data:  this.state
-      .then((response) => {
-        if (response.data.status === 'success') {
-          alert("Message Sent.");
-          this.resetForm()
-        } else if (response.data.status === 'fail') {
-          alert("Message failed to send.")
-        }
-      }).catch((err) => {
-        console.log(err);
-      })
-  }
+     e.preventDefault();
+     axios({
+       method: "POST",
+       url: "/api/contact",
+       baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
+       data:  this.state
+     }).then((response) => {
+       if (response.data.status === 'success') {
+         alert("Message Sent.");
+         this.resetForm()
+       } else if(response.data.status === 'fail') {
+         alert("Message failed to send.")
+       }
+     }).catch((err) => {
+       console.log(err);
+     })
+   }
 
-  resetForm() {
-    this.setState({ name: "", email: "", message: "" })
-  }
+   resetForm(){
+      this.setState({name: "", email: "", message: ""})
+   }
+
 
   render() {
     return (
