@@ -16,7 +16,7 @@ class Contact extends React.Component {
      axios({
        method: "POST",
        url: "/api/contact",
-       baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/',
+       baseURL: process.env.REACT_APP_BASE_PATH || 'http://backend.silvercityuprising.com/api/contact/',
        data:  this.state
      }).then((response) => {
        if (response.data.status === 'success') {
