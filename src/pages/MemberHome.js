@@ -12,7 +12,9 @@ const StyledRoot = styled.div`
 	align-items: start;
 	flex: 1 1;
 	background-image: linear-gradient(180deg, transparent ${imageOffset}, #000 calc(${imageOffset} + 1px), #f5f5f5 calc(${imageOffset} + 1px));
+	background-color: gray;
 	background-attachment: fixed;
+	padding-top: 100px;
 `
 const StyledMain = styled.main`
 	width: 100%;
