@@ -19,6 +19,7 @@ import News from './pages/NewsPage/News';
 import Volunteer from './pages/Volunteer';
 import TaskForce from './pages/TaskForce';
 import Events from './pages/Events';
+import MemberHome from './pages/MemberHome';
 import Landing from './pages/LandingPage/Landing'
 import Login from './pages/loginPage/loginPage'
 
@@ -43,7 +44,7 @@ ReactDOM.render(
         <Route path="/taskForce" component={TaskForce} />
         <Route path="/events" component={Events} />
         <Route path="/login" component={Login} />
-        <Route path="/member" component={Events} />
+        <Route path="/member" component={MemberHome} />
 
       </div>
     </Switch>

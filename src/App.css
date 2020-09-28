@@ -23,7 +23,7 @@ body {
 position: relative
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Alegreya', serif;
+  font-family: 'Ubuntu', serif;
 }
 .fa {
  padding: 20px;
@@ -129,7 +129,8 @@ p {
   color: white;
   text-align: center;
 }
-.founders-img {
+.founders-img,
+.profile-img {
   border-radius: 50%;
 }
 .card-img-top {
