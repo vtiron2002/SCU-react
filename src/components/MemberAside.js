@@ -47,12 +47,12 @@ const StyledProfileDiv = styled.div`
 `
 
 const activities = [
-	{ title: 'Applications', src: './images/Icons/apps-active.png' },
-	{ title: 'Training', src: './images/Icons/training-active.png' },
-	{ title: 'Community', src: './images/Icons/community-active.png' },
-	{ title: 'Events', src: './images/Icons/events-active.png' },
-	{ title: 'Profile', src: './images/Icons/profile-active.png' },
-	{ title: 'Notifications', src: './images/Icons/notification-active.png' },
+	{ title: 'Applications', src: './images/Icons/apps-active.png', id: 1 },
+	{ title: 'Training', src: './images/Icons/training-active.png', id: 2 },
+	{ title: 'Community', src: './images/Icons/community-active.png', id: 3 },
+	{ title: 'Events', src: './images/Icons/events-active.png', id: 4 },
+	{ title: 'Profile', src: './images/Icons/profile-active.png', id: 5 },
+	{ title: 'Notifications', src: './images/Icons/notification-active.png', id: 6 },
 ]
 
 const MemberAside = () => {
@@ -65,7 +65,7 @@ const MemberAside = () => {
 			<GridDiv>
 				{
 					activities.map(activity => 
-						<div className="member-aside-item">
+						<div key={activity.id} className="member-aside-item">
 							<img src={activity.src} alt=""/>
 							<div>{activity.title}</div>
 						</div>

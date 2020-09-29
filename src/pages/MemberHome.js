@@ -30,10 +30,10 @@ const StyledGrid = styled.div`
 	padding: 40px;
 `
 const activities = [
-	{ title: 'Apply for a Program', src: './images/Icons/apps-active.png' },
-	{ title: 'Begin my Training', src: './images/Icons/training-active.png' },
-	{ title: 'Join the Community', src: './images/Icons/community-active.png' },
-	{ title: 'RSVP for an Event', src: './images/Icons/events-active.png' },
+	{ title: 'Apply for a Program', src: './images/Icons/apps-active.png', id: 1 },
+	{ title: 'Begin my Training', src: './images/Icons/training-active.png', id: 2 },
+	{ title: 'Join the Community', src: './images/Icons/community-active.png', id: 3 },
+	{ title: 'RSVP for an Event', src: './images/Icons/events-active.png', id: 4 },
 ]
 
 const MemberHome = () => {
@@ -48,6 +48,7 @@ const MemberHome = () => {
 					{
 						activities.map((activity) => 
 							<ActivityCard
+								key={activity.id}
 								title={activity.title}
 								imgSrc={activity.src}
 							/>

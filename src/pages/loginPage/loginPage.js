@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import loginService from '../../services/loginService'
 // import config from '../../config';
 // import authServices from '../../services/authServices';
 import './login-style.css';
-const Login = () => {
-	// const [username, setUsername] = useState('');
-	// const [password, setPassword] = useState('');
+const Login = ({ setUser }) => {
+	let history = useHistory();
 
 	const onSubmitHandler = async (e) => {
 		e.preventDefault();
 		const { username, password } = e.target;
 		console.log(username.value, password.value);
 		try {
-			const response = await loginService.login({ user_name: username.value, password: password.value });
-			console.log(response);
-			// token is stored in response.authToken
+			const data = await loginService.login({ user_name: username.value, password: password.value });
+			console.log(data);
+			history.push('/member')
+			// token is stored in data.authToken
+			setUser(data.userInfo)
+			
 		} catch (exception) {
 			console.log(exception.response)
 		}
