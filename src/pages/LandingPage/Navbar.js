@@ -9,7 +9,7 @@ const Nav = styled(BaseNav)({
     width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginLeft: '15%',
+		marginLeft: '15%',
 })
 
 const DonateLink = styled(Nav.Link)({
