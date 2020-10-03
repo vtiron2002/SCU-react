@@ -19,8 +19,8 @@ import Nav from './pages/LandingPage/Navbar';
 
 import './App.css';
 
-
-import CommunityPage from './pages/MemberPages/CommunityPage';
+import CommunityPage from './pages/MemberPages/CommunityPage/CommunityPage';
+import CommunityPostPage from './pages/MemberPages/CommunityPage/CommunityPostPage';
 import ApplicationsPage from './pages/MemberPages/ApplicationsPage';
 
 const BaseApp = () => {
@@ -46,7 +46,11 @@ const BaseApp = () => {
         {/* all member pages will can route this way */}
         <Route exact path='/member' component={MemberHome} />
         <Route path='/member/applications' component={ApplicationsPage} />
-        <Route path='/member/community' component={CommunityPage} />
+        <Route exact path='/member/community' component={CommunityPage} />
+        <Route
+          path='/member/community/post/:id'
+          component={CommunityPostPage}
+        />
       </Switch>
     </BrowserRouter>
   );
